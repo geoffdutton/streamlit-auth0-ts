@@ -1,20 +1,22 @@
-# Welcome to Auth0-Streamlit :fork
+# Welcome to Auth0-Streamlit :forked:
 
 **The fastest way to provide comprehensive login inside Streamlit**
 
 _Updated to latest auth0 sdk_
 
+This is a fork of the original [onradbez/streamlit-auth0@c5e5666](https://github.com/conradbez/streamlit-auth0#c5e5666). Thanks to the original author for the great work!
+
 ![Example of Streamlit-Auth0|635x380](demo.gif?raw=true)
 
 ## Installation
 
-`pip install streamlit-auth0-component-forked`
+`pip install streamlit-auth0-ts`
 
 ## Setup
 
 - Register for Auth0
 - Create a Single Page Application and navigate to the "settings" tab
-- set your callback url's to `http://localhost:8501/component/auth0_component.login_button/index.html` assuming you're running on localhost or `http://YOUR_DOMAIN/component/auth0_component.login_button/index.html` if you're deploying
+- set your callback url's to `http://localhost:8501/component/auth0_component.login_button/index.html` assuming you're running on localhost or `https://YOUR_DOMAIN/component/auth0_component.login_button/index.html` if you're deploying
 - Set your Web Origin to `http://localhost:8501` or `http://YOUR_DOMAIN`
 - Copy `client_id` and `domain` from this page
 - Follow example below

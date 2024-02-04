@@ -10,13 +10,13 @@ _RELEASE = True
 
 if not _RELEASE:
     _login_button = components.declare_component(
-        "login_button",
+        "auth0_login_button",
         url="http://localhost:3000",  # vite dev server port
     )
 else:
     parent_dir = os.path.dirname(os.path.abspath(__file__))
     build_dir = os.path.join(parent_dir, "frontend/dist")
-    _login_button = components.declare_component("login_button", path=build_dir)
+    _login_button = components.declare_component("auth0_login_button", path=build_dir)
 
 
 class LoginButtonManager:
@@ -96,7 +96,6 @@ def login_button(clientId, domain, key=None, **kwargs):
     user_info = _login_button(
         client_id=clientId, domain=domain, key=key, audience=manager.audience, default=0
     )
-    print("user_info", user_info)
 
     if not user_info:
         return False
