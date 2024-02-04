@@ -1,6 +1,7 @@
 name: Publish Python 🐍 distribution 📦 to PyPI and TestPyPI
 
-on: push
+on:
+  workflow_dispatch:
 
 jobs:
   build:
@@ -9,7 +10,7 @@ jobs:
 
     steps:
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: "20"
       - uses: actions/checkout@v4
