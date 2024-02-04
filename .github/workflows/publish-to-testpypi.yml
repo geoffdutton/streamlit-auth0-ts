@@ -22,6 +22,10 @@ jobs:
         run: |
           cd streamlit_auth0_component/frontend
           npm ci
+      - name: Build the frontend
+        run: |
+          cd streamlit_auth0_component/frontend
+          npm run build
       - name: Install pypa/build
         run: >-
           python3 -m
