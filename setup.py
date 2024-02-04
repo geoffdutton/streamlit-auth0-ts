@@ -1,8 +1,8 @@
 import setuptools
 
 setuptools.setup(
-    name="streamlit-auth0-component",
-    version="0.1.5",
+    name="streamlit-auth0-component-forked",
+    version="0.2.0",
     author="",
     author_email="",
     description="",
@@ -18,6 +18,6 @@ setuptools.setup(
         # If your component has other Python dependencies, list
         # them here.
         "streamlit >= 0.63",
-        "python-jose == 3.3.0"
+        "python-jose == 3.3.0",
     ],
 )

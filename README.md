@@ -1,21 +1,26 @@
-# Welcome to Auth0-Streamlit
+# Welcome to Auth0-Streamlit :fork
 
 **The fastest way to provide comprehensive login inside Streamlit**
+
+_Updated to latest auth0 sdk_
 
 ![Example of Streamlit-Auth0|635x380](demo.gif?raw=true)
 
 ## Installation
-`pip install streamlit-auth0-component`
+
+`pip install streamlit-auth0-component-forked`
 
 ## Setup
 
 - Register for Auth0
-- Create a Single Page Application and navigate to the "settings" tab 
+- Create a Single Page Application and navigate to the "settings" tab
 - set your callback url's to `http://localhost:8501/component/auth0_component.login_button/index.html` assuming you're running on localhost or `http://YOUR_DOMAIN/component/auth0_component.login_button/index.html` if you're deploying
+- Set your Web Origin to `http://localhost:8501` or `http://YOUR_DOMAIN`
 - Copy `client_id` and `domain` from this page
 - Follow example below
 
 ## An example
+
 On Auth0 website start a "Single Page Web Application" and copy your client-id / domain (of form xxxx.us.auth0.com) into code below.
 
 ```
@@ -29,15 +34,12 @@ user_info = login_button(clientId, domain = domain)
 st.write(user_info)
 ```
 
-`user_info` will now contain your user's information 
-
+`user_info` will now contain your user's information
 
 ## Todo
 
-- Pass all info through JWT, at the moment the `sub` field is the only field assing through verification
-- Test with other providers, only Google tested 
-
-
+- Pass all info through JWT, at the moment the `sub` field is the only field passing through verification
+- Test with other providers, only Google tested
 
 ## Deploy
 

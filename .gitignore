@@ -6,3 +6,5 @@ dist
 streamlit_auth0_component.egg-info
 build/
 dist/
+*.egg-info/
+.venv
