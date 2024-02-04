@@ -22,3 +22,8 @@ clean:
 	@rm -rf dist/
 	@rm -rf build/
 	@rm -rf *.egg-info/
+
+.PHONY: deploy
+deploy: build
+	@twine upload dist/*
+	@echo "Deployed to PyPI"
