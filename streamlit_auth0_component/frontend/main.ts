@@ -7,6 +7,7 @@ import {
   GetTokenWithPopupOptions,
   User,
   createAuth0Client,
+  LogoutOptions,
 } from "@auth0/auth0-spa-js";
 import "toastify-js/src/toastify.css";
 import "./style.css";
@@ -58,7 +59,9 @@ if (__DEV__) {
 const logout = async () => {
   // this was returning a type error for "returnTo"
   // const logoutResult = await auth0.logout({ returnTo: getOriginUrl() });
-  const logoutResult = await auth0.logout();
+  const logoutResult = await auth0.logout({
+    logoutParams: { returnTo: getOriginUrl() },
+  });
   console.log({ logoutResult });
   button.textContent = "Login";
   button.removeEventListener("click", logout);

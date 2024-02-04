@@ -1,17 +1,20 @@
 on:
   push:
-    branches:
-    - main
-  pull_request:
-    branches:
-    - main
+    tags:
+      - "v*.*.*"
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy Pypi
-        uses: remorses/pypi@v3
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build
+        run: make build
+
+      - name: Deploy to PyPI
+        uses: pypa/gh-action-pypi-publish@v2
         with:
           username: __token__
           password: ${{ secrets.PYPI_API_TOKEN }}

@@ -7,7 +7,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setuptools.setup(
     name="streamlit-auth0-ts",
-    version="0.2.1",
+    version="0.2.2",
     author="",
     author_email="g.dutton@gmail.com",
     description="Quickly add Auth0 authentication to your Streamlit app.",

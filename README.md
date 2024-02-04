@@ -16,9 +16,14 @@ This is a fork of the original [onradbez/streamlit-auth0@c5e5666](https://github
 
 - Register for Auth0
 - Create a Single Page Application and navigate to the "settings" tab
-- set your callback url's to `http://localhost:8501/component/auth0_component.login_button/index.html` assuming you're running on localhost or `https://YOUR_DOMAIN/component/auth0_component.login_button/index.html` if you're deploying
-- Set your Web Origin to `http://localhost:8501` or `http://YOUR_DOMAIN`
-- Copy `client_id` and `domain` from this page
+- Set `Allow Callback URLs` to `http://localhost:8501/component/streamlit_auth0_component.auth0_login_button/index.html`
+- Set `Allowed Logout URLs` to `http://localhost:8501/component/streamlit_auth0_component.auth0_login_button/index.html`
+- Set `Allowed Web Origins` to `http://localhost:8501`
+- Copy `client_id` and `domain` from the Application settings, and put it into a `.env` file in the root of your project and ddd the following:
+
+  - `AUTH0_CLIENT_ID="your_client_id"`
+  - `AUTH0_DOMAIN="your_domain"`
+
 - Follow example below
 
 ## An example
